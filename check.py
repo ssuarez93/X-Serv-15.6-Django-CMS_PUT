@@ -13,10 +13,10 @@ import os
 import random
 import sys
 
-ejercicio = 'X-Serv-15.6-Django-CMS_PUT'
+ejercicio = 'X-Serv-15.5-Django-CMS'
 
 student_projname = 'myproject'
-student_appname = 'cms_put'
+student_appname = 'cms'
 
 student_files = [
     'manage.py',
