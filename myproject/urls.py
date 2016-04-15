@@ -7,7 +7,13 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^pages', 'cms_put.views.lista_paginas'),
-    url(r'^(\d+)', 'cms_put.views.identificador'),
-    url(r'^(.*)$', 'cms_put.views.recurso')
+    url(r'^login$', 'django.contrib.auth.views.login'),
+    url(r'^logout$', 'django.contrib.auth.views.logout'),
+    url(r'^accounts/profile/$', 'cms_templates.views.profile'),
+    url(r'^pages$', 'cms_templates.views.lista_paginas'),
+    url(r'^$', 'cms_templates.views.lista_paginas'),
+    url(r'^annotated/(\d+)$', 'cms_templates.views.annotated_identificador'),
+    url(r'^annotated/(.*)$', 'cms_templates.views.annotated_recurso'),
+    url(r'^(\d+)$', 'cms_templates.views.identificador'),
+    url(r'^(.*)$', 'cms_templates.views.recurso')
 )
